@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>altpro::Altitude profile demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+
+      body {
+        padding: 4em;
+        background-color: grey;
+      }
+
+      .demo {
+        background-color: white;
+        height: 400px;
+        width: 900px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class='demo'>
+    </div>
+    <script src="build/build.js"></script>
+    <script>
+      const altpro = require('altpro');
+      const div = document.querySelector('.demo');
+      altpro(div);
+    </script>
+  </body>
+</html>

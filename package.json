@@ -1,0 +1,31 @@
+{
+  "name": "altpro",
+  "version": "0.0.0",
+  "description": "Elevation profile widget.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.me"
+  },
+  "repository": "pirxpilot/altpro",
+  "license": "MIT",
+  "keywords": [
+    "altpro",
+    "elevation",
+    "profile"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "~16",
+    "jshint": "~2",
+    "mocha": "~5",
+    "should": "~13"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
