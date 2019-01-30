@@ -6,11 +6,12 @@
 
       body {
         margin: 0;
-        padding: 4em;
+        padding: 1em 2em;
         background-color: grey;
       }
 
       .demo {
+        margin: 1em 0;
         background-color: white;
         height: 40vh;
         width: 100%;
@@ -25,7 +26,8 @@
     </style>
   </head>
   <body>
-    <div class='demo'>
+    <div class='demo'></div>
+    <div class='demo'></div>
     </div>
     <script src="build/build.js"></script>
     <script>
@@ -51,8 +53,24 @@
       ];
 
       const altpro = require('altpro');
-      const div = document.querySelector('.demo');
-      altpro(div, data);
+      const divs = document.querySelectorAll('.demo');
+      altpro(divs[0], data);
+      altpro(divs[1], randomData());
+
+
+      function randomData() {
+        const data = [];
+        let prevElevation = 350;
+        for(let i = 0; i< 250; i++) {
+          let elevation = prevElevation + Math.random() * 30 - 15;
+          data.push({
+            distance: Math.random() * 15 + 0.5,
+            elevation
+          });
+          prevElevation = elevation;
+        }
+        return data;
+      }
     </script>
   </body>
 </html>
