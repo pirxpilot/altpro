@@ -28,12 +28,28 @@
         right: 0;
       }
 
+      form {
+        text-align: center;
+      }
+
+      form label {
+        margin-right: 2em;
+      }
+
+      form input {
+        margin-left: 1em;
+      }
+
     </style>
   </head>
   <body>
-    <div class='demo'></div>
-    <div class='demo'></div>
-    </div>
+    <div class="demo"></div>
+    <div class="demo"></div>
+    <form>
+      <label>Index: <input type="text" name="index" readonly></label>
+      <label>Distance: <input type="text" name="distance" readonly></label>
+      <label>Elevation: <input type="text" name="elevation" readonly></label>
+    </form>
     <script src="build/build.js"></script>
     <script>
 
@@ -62,14 +78,26 @@
       altpro(divs[0], data);
       altpro(divs[1], randomData()).select(100);
 
+      divs[1].addEventListener('altpro-select', onselect);
+
+      const form = document.querySelector('form');
+
+
+      function onselect({ detail }) {
+        const { elevation, distance, index } = detail;
+
+        form.elements.elevation.value = elevation;
+        form.elements.distance.value = distance;
+        form.elements.index.value = index;
+      }
 
       function randomData() {
         const data = [];
         let prevElevation = 350;
         for(let i = 0; i< 250; i++) {
-          let elevation = prevElevation + Math.random() * 30 - 15;
+          let elevation = Math.round(prevElevation + Math.random() * 30 - 15);
           data.push({
-            distance: Math.random() * 15 + 0.5,
+            distance: Math.round(Math.random() * 15 + 0.5),
             elevation
           });
           prevElevation = elevation;
