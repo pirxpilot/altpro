@@ -14,6 +14,9 @@
     "elevation",
     "profile"
   ],
+  "dependencies": {
+    "binary-search": "~1"
+  },
   "devDependencies": {
     "browserify": "~16",
     "canvas": "~2",
