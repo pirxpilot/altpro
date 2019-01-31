@@ -23,7 +23,7 @@ clean:
 distclean: clean
 	rm -rf node_modules
 
-check: lint
+check: test lint
 
 lint:
 	./node_modules/.bin/jshint *.js lib test
