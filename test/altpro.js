@@ -43,7 +43,7 @@ describe('altpro', function () {
     const label = parent.querySelector('.altpro-label');
 
     this.ap.select(1);
-    label.innerText.should.eql('20m');
+    label.innerText.should.eql('20');
   });
 
 });
