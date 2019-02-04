@@ -1,4 +1,11 @@
 
+0.2.0 / 2019-02-04
+==================
+
+ * add method to change units on displayed profile
+ * start Y axis at minimum elevation in a data set
+ * externalize elevation label
+
 0.1.1 / 2019-01-31
 ==================
 
