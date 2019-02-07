@@ -95,12 +95,17 @@
         const data = [];
         let prevElevation = 3350;
         for(let i = 0; i< 250; i++) {
-          let elevation = Math.round(prevElevation + Math.random() * 30 - 15);
+          let ele = Math.round(prevElevation + Math.random() * 30 - 15);
+          let elevation;
+          // missing chunk
+          if ((i > 2 && i < 100) || (i > 120 && i < 242)) {
+            elevation = ele;
+          }
           data.push({
             distance: Math.round(Math.random() * 15 + 0.5),
             elevation
           });
-          prevElevation = elevation;
+          prevElevation = ele;
         }
         data[0].distance = 0;
         return data;
