@@ -1,4 +1,11 @@
 
+1.0.1 / 2019-02-28
+==================
+
+ * support clearing current selection
+ * send event altpro-select when selection is cleared on mouseleave
+ * fix mouseleave handler (clear selected elevation)
+
 1.0.0 / 2019-02-09
 ==================
 
