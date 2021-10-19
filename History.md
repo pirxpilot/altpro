@@ -1,4 +1,9 @@
 
+1.0.2 / 2021-10-19
+==================
+
+ * convert elevation sent with altpro-select event to the configured units
+
 1.0.1 / 2019-02-28
 ==================
 
