@@ -1,5 +1,5 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 
 # altpro
 
@@ -64,5 +64,5 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [npm-image]: https://img.shields.io/npm/v/altpro.svg
 [npm-url]: https://npmjs.org/package/altpro
 
-[travis-url]: https://travis-ci.com/pirxpilot/altpro
-[travis-image]: https://img.shields.io/travis/com/pirxpilot/altpro.svg
+[build-url]: https://github.com/pirxpilot/altpro/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/altpro/check
