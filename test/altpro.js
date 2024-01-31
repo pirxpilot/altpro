@@ -1,13 +1,17 @@
+const { describe, before, after, beforeEach, afterEach, it } = require('node:test');
 const should = require('should');
 const altpro = require('../');
 
 describe('altpro', function () {
+  let jsdom;
+  let ap;
+
   before(function () {
-    this.jsdom = require('jsdom-global')();
+    jsdom = require('jsdom-global')();
   });
 
   after(function () {
-    this.jsdom();
+    jsdom();
   });
 
   beforeEach(function () {
@@ -15,7 +19,7 @@ describe('altpro', function () {
   });
 
   afterEach(function () {
-    this.ap.destroy();
+    ap.destroy();
   });
 
   it('create canvas when attached', function () {
@@ -26,7 +30,7 @@ describe('altpro', function () {
       { elevation: 30, distance: 15 }
     ];
 
-    this.ap = altpro(parent, data);
+    ap = altpro(parent, data);
     parent.querySelectorAll('canvas').should.have.length(2);
     should.exist(parent.querySelector('.altpro-label'));
   });
@@ -39,10 +43,10 @@ describe('altpro', function () {
       { elevation: 30, distance: 15 }
     ];
 
-    this.ap = altpro(parent, data);
+    ap = altpro(parent, data);
     const label = parent.querySelector('.altpro-label');
 
-    this.ap.select(1);
+    ap.select(1);
     label.innerText.should.eql('20');
   });
 
