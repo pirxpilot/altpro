@@ -18,11 +18,11 @@
     "binary-search": "~1"
   },
   "devDependencies": {
+    "@pirxpilot/jshint": "~3",
     "browserify": "~17",
     "canvas": "~2",
     "jsdom": "~18",
     "jsdom-global": "~3",
-    "jshint": "~2",
     "mocha": "~9",
     "should": "~13"
   },
