@@ -1,4 +1,11 @@
 
+1.0.3 / 2024-01-31
+==================
+
+ * replace mocha with node:test
+ * replace browserify with esbuild
+ * replace jshint with @pirxpilot/jshint
+
 1.0.2 / 2021-10-19
 ==================
 
