@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
-    "browserify": "~17",
     "canvas": "~2",
+    "esbuild": "^0.20.0",
     "jsdom": "~18",
     "jsdom-global": "~3",
     "mocha": "~9",
