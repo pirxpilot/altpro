@@ -61,8 +61,8 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 
 [demo]: https://pirxpilot.github.io/altpro
 
-[npm-image]: https://img.shields.io/npm/v/altpro.svg
+[npm-image]: https://img.shields.io/npm/v/altpro
 [npm-url]: https://npmjs.org/package/altpro
 
 [build-url]: https://github.com/pirxpilot/altpro/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/altpro/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/altpro/check.yaml?branch=main
