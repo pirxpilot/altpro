@@ -1,28 +1,28 @@
 const { describe, it } = require('node:test');
 const findSegment = require('../lib/find-segment');
 
-describe('find-segment', function () {
+describe('find-segment', () => {
   const data = [];
   for (let i = 0; i < 100; i++) {
     data.push({ elevation: i, distance: i * 10 });
   }
 
-  it('finds first segment', function () {
-    findSegment(data, -1).should.be.below(0);
-    findSegment(data, 0).should.eql(1);
-    findSegment(data, 5).should.eql(1);
-    findSegment(data, 10).should.eql(1);
+  it('finds first segment', t => {
+    t.assert.ok(findSegment(data, -1) < 0);
+    t.assert.equal(findSegment(data, 0), 1);
+    t.assert.equal(findSegment(data, 5), 1);
+    t.assert.equal(findSegment(data, 10), 1);
   });
 
-  it('finds segment', function () {
-    findSegment(data, 499).should.eql(50);
-    findSegment(data, 500).should.eql(50);
-    findSegment(data, 501).should.eql(51);
+  it('finds segment', t => {
+    t.assert.equal(findSegment(data, 499), 50);
+    t.assert.equal(findSegment(data, 500), 50);
+    t.assert.equal(findSegment(data, 501), 51);
   });
 
-  it('finds last segment', function () {
-    findSegment(data, 989).should.eql(99);
-    findSegment(data, 990).should.eql(99);
-    findSegment(data, 991).should.be.below(0);
+  it('finds last segment', t => {
+    t.assert.equal(findSegment(data, 989), 99);
+    t.assert.equal(findSegment(data, 990), 99);
+    t.assert.ok(findSegment(data, 991) < 0);
   });
 });

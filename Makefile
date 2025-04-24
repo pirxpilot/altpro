@@ -35,6 +35,6 @@ format:
 	./node_modules/.bin/biome check --fix
 
 test:
-	node --require should --require jsdom-global/register --test
+	node --require jsdom-global/register --test
 
 .PHONY: check lint test check compile

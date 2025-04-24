@@ -22,8 +22,7 @@
     "canvas": "~3",
     "esbuild": "^0.25.0",
     "jsdom": "~26",
-    "jsdom-global": "~3",
-    "should": "~13"
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
