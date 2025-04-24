@@ -74,6 +74,7 @@
       ];
 
       const divs = document.querySelectorAll('.demo');
+      altpro = altpro.default;
       altpro(divs[0], data);
       altpro(divs[1], randomData()).select(100);
 
@@ -83,6 +84,8 @@
 
 
       function onselect({ detail }) {
+        if (!detail) return;
+
         const { elevation, distance, index } = detail;
 
         form.elements.elevation.value = elevation;

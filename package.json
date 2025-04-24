@@ -7,7 +7,12 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/altpro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/altpro.git"
+  },
+  "type": "module",
+  "exports": "./lib/altpro.js",
   "license": "MIT",
   "keywords": [
     "altpro",
@@ -18,18 +23,16 @@
     "binary-search": "~1"
   },
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
+    "@biomejs/biome": "^1.9.4",
     "canvas": "~3",
     "esbuild": "^0.25.0",
     "jsdom": "~26",
-    "jsdom-global": "~3",
-    "should": "~13"
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }

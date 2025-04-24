@@ -1,28 +1,28 @@
-const { describe, before, after, beforeEach, afterEach, it } = require('node:test');
-const should = require('should');
-const altpro = require('../');
+import test from 'node:test';
+import JSDOM from 'jsdom-global';
+import altpro from '../lib/altpro.js';
 
-describe('altpro', function () {
+test('altpro', async t => {
   let jsdom;
   let ap;
 
-  before(function () {
-    jsdom = require('jsdom-global')();
+  t.before(() => {
+    jsdom = JSDOM();
   });
 
-  after(function () {
+  t.after(() => {
     jsdom();
   });
 
-  beforeEach(function () {
+  t.beforeEach(() => {
     document.body.innerHTML = '<div id="test"></div>';
   });
 
-  afterEach(function () {
+  t.afterEach(() => {
     ap.destroy();
   });
 
-  it('create canvas when attached', function () {
+  await t.test('create canvas when attached', t => {
     const parent = document.getElementById('test');
     const data = [
       { elevation: 10, distance: 0 },
@@ -31,11 +31,11 @@ describe('altpro', function () {
     ];
 
     ap = altpro(parent, data);
-    parent.querySelectorAll('canvas').should.have.length(2);
-    should.exist(parent.querySelector('.altpro-label'));
+    t.assert.equal(parent.querySelectorAll('canvas').length, 2);
+    t.assert.ok(parent.querySelector('.altpro-label'));
   });
 
-  it('display label on select', function () {
+  await t.test('display label on select', t => {
     const parent = document.getElementById('test');
     const data = [
       { elevation: 10, distance: 0 },
@@ -47,7 +47,6 @@ describe('altpro', function () {
     const label = parent.querySelector('.altpro-label');
 
     ap.select(1);
-    label.innerText.should.eql('20');
+    t.assert.equal(label.innerText, '20');
   });
-
 });
