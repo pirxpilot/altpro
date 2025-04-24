@@ -49,5 +49,4 @@ describe('altpro', function () {
     ap.select(1);
     label.innerText.should.eql('20');
   });
-
 });

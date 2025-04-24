@@ -29,7 +29,10 @@ distclean: clean
 check: test lint
 
 lint:
-	./node_modules/.bin/jshint *.js lib test
+	./node_modules/.bin/biome ci
+
+format:
+	./node_modules/.bin/biome check --fix
 
 test:
 	node --require should --require jsdom-global/register --test

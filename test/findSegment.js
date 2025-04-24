@@ -25,5 +25,4 @@ describe('find-segment', function () {
     findSegment(data, 990).should.eql(99);
     findSegment(data, 991).should.be.below(0);
   });
-
 });

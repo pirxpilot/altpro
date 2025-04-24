@@ -18,7 +18,7 @@
     "binary-search": "~1"
   },
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
+    "@biomejs/biome": "^1.9.4",
     "canvas": "~3",
     "esbuild": "^0.25.0",
     "jsdom": "~26",
