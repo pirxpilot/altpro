@@ -1,4 +1,14 @@
 
+2.0.0 / 2025-04-24
+==================
+
+ * fix minor bug in example
+ * use simpler test harness
+ * transition to ESM module
+ * use built-in `node:assert` instead of `should`
+ * use biome for linting and formating
+ * update dev dependencies
+
 1.0.3 / 2024-01-31
 ==================
 
