@@ -1,12 +1,13 @@
-const { describe, before, after, beforeEach, afterEach, it } = require('node:test');
-const altpro = require('../');
+import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
+import JSDOM from 'jsdom-global';
+import altpro from '../lib/altpro.js';
 
 describe('altpro', () => {
   let jsdom;
   let ap;
 
   before(() => {
-    jsdom = require('jsdom-global')();
+    jsdom = JSDOM();
   });
 
   after(() => {

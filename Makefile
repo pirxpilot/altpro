@@ -1,5 +1,5 @@
 PROJECT = altpro
-SRC = index.js lib/*.js
+SRC = lib/*.js
 
 all: check compile
 
@@ -14,7 +14,7 @@ build/build.js: $(SRC) | build node_modules
 		--define:DEBUG="true" \
 		--global-name=$(PROJECT) \
 		--outfile=$@ \
-		index.js
+		lib/altpro.js
 
 node_modules: package.json
 	yarn

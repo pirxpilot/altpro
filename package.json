@@ -7,7 +7,12 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/altpro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/altpro.git"
+  },
+  "type": "module",
+  "exports": "./lib/altpro.js",
   "license": "MIT",
   "keywords": [
     "altpro",
@@ -28,7 +33,6 @@
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }

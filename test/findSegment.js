@@ -1,5 +1,5 @@
-const { describe, it } = require('node:test');
-const findSegment = require('../lib/find-segment');
+import { describe, it } from 'node:test';
+import findSegment from '../lib/find-segment.js';
 
 describe('find-segment', () => {
   const data = [];
