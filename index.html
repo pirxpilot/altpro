@@ -84,6 +84,8 @@
 
 
       function onselect({ detail }) {
+        if (!detail) return;
+
         const { elevation, distance, index } = detail;
 
         form.elements.elevation.value = elevation;
