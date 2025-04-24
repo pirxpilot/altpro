@@ -1,28 +1,28 @@
-import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
+import test from 'node:test';
 import JSDOM from 'jsdom-global';
 import altpro from '../lib/altpro.js';
 
-describe('altpro', () => {
+test('altpro', async t => {
   let jsdom;
   let ap;
 
-  before(() => {
+  t.before(() => {
     jsdom = JSDOM();
   });
 
-  after(() => {
+  t.after(() => {
     jsdom();
   });
 
-  beforeEach(() => {
+  t.beforeEach(() => {
     document.body.innerHTML = '<div id="test"></div>';
   });
 
-  afterEach(() => {
+  t.afterEach(() => {
     ap.destroy();
   });
 
-  it('create canvas when attached', t => {
+  await t.test('create canvas when attached', t => {
     const parent = document.getElementById('test');
     const data = [
       { elevation: 10, distance: 0 },
@@ -35,7 +35,7 @@ describe('altpro', () => {
     t.assert.ok(parent.querySelector('.altpro-label'));
   });
 
-  it('display label on select', t => {
+  await t.test('display label on select', t => {
     const parent = document.getElementById('test');
     const data = [
       { elevation: 10, distance: 0 },
