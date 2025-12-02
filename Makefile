@@ -8,17 +8,13 @@ compile: build/build.js
 build:
 	mkdir -p $@
 
-build/build.js: $(SRC) | build node_modules
+build/build.js: $(SRC) | build
 	node_modules/.bin/esbuild \
 		--bundle \
 		--define:DEBUG="true" \
 		--global-name=$(PROJECT) \
 		--outfile=$@ \
 		lib/altpro.js
-
-node_modules: package.json
-	yarn
-	touch $@
 
 clean:
 	rm -fr build
