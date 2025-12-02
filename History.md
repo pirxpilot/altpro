@@ -1,4 +1,12 @@
 
+2.0.1 / 2025-12-02
+==================
+
+ * upgrade `esbuild` to 0.27.0
+ * update github actions
+ * upgrade `jsdom` to ~27
+ * upgrade `biome`
+
 2.0.0 / 2025-04-24
 ==================
 
